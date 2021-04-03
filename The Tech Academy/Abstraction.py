@@ -1,13 +1,22 @@
-from abc import ABC, abstractmethod
+# Imports Vehicle class from Encapsulation.py file
+from Encapsulation import Vehicle
 
-class car(ABC):
-	def paySlip(self, amount):
-		print("Your purchase amount: ", amount)
+# Defines child class called Car
+class Car(Vehicle):
+	# Abstract method that changes the change_message function
+	#@abstractmethod # (BREAKS CODE FOR SOME REASON?)
+	def change_message(self):
+		# Sets _secretMessage to a uniique string
+		self._secretMessage = "Message Changed Abstractly!"
+		print(self._secretMessage)
 
-	@abstractmethod
-	def payment(self, amount):
-		pass
+	# Regular method that gets the number of wheels on the vehicle
+	def get_wheel_count(self):
+		print(self.numWheels)
 
-class DebitCardPayment(car):
-	def payment(self, amount):
-		print("Your purchase amount of {} exceeded your $100 limit ".format(amount))
+# Creates a new object thats an instance of Car class
+newCar = Car("Car", False, 4)
+# Calls abstract function, change_message
+newCar.change_message()
+# Calls normal function, get_wheel_count
+newCar.get_wheel_count()
