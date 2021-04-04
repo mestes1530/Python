@@ -33,12 +33,3 @@ testVehicle = Vehicle("Vehicle", False, 4)
 testVehicle.move_vehicle()
 testVehicle.change_message("Secret Message Changed!")
 testVehicle.move_vehicle()
-
-# BOTH STATEMENTS BELOW BREAK IT FOR SOME REASOM?
-#testCar = Car("Car", False, 4, "Ford", "Ranger")
-#testBike = Bike("Bike", False, 2, True, False)
-
-# WOULD USE CODE BELOW (INSTEAD) IF ABOVE STATEMENTS WORKED 
-#testCar.move_vehicle()
-#testCar.change_message("Message Changed To Car!")
-#testCar.move_vehicle()
