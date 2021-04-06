@@ -18,13 +18,16 @@ def File_Check():
 	for i in files:
 		shutil.move(source+i, destination)
 
-# User prompts detailing the file transfer in text
-print("Files in sourceFolder: { " + files[0] + ", " + files[1] + ", " + files[2] + " }\n")
-print("Files in destinationFolder: { }\n")
-print("Press 'Enter' to run the daily file transfer:\n")
-x = input() # Breaks here, tried a variation of input statements
-print("Input was successfully entered")
-
-
-# Calling the function
+# User prompts detailing the file transfer in text before File_Check function
+print("Files in sourceFolder: { " + files[0] + ", " + files[1] + ", " + files[2] + " }")
+print("Files in destinationFolder: { }")
+print("Press 'Enter' to run the daily file transfer:")
+# Waits for the user input to run 
+x = raw_input() 
+# Calls the File_Check function on user request
 File_Check()
+# Prints closing message letting user know it worked
+print("Daily File Check Run:")
+print("Files in sourceFolder: { }")
+print("Files in destinationFolder: { " + archives[0] + ", " + archives[1] + ", " + archives[2] + " }")
+
